@@ -77,7 +77,7 @@ class UserController extends Controller
         $user->save();
 
         return response()->json([
-            'data'  => true
+            'message'  => 'logged out'
         ])->setStatusCode(200);
     }
 

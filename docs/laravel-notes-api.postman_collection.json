@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "c1f6f97e-5cc0-4ead-8ede-00e92d390dc2",
+		"name": "laravel-notes-api",
+		"description": "Documentation for notes app. Developed using Laravel and MySQL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13926151"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "logout",
+							"item": [
+								{
+									"name": "Delete token from user",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "685b289e-a3f1-4028-8903-5abc0653454a",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/users/logout",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												"logout"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "login",
+							"item": [
+								{
+									"name": "Create new token for user",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"amuhammadsalman45@gmail.com\",\r\n    \"password\": \"asdfjklgh\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/users/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												"login"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "register",
+							"item": [
+								{
+									"name": "Register new User",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"amuhammadsalman45@gmail.com\",\r\n    \"username\" : \"jioaf\",\r\n    \"password\" : \"asdfjklgh\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/users/register",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												"register"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Get authorized User",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "685b289e-a3f1-4028-8903-5abc0653454a",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update authorized User",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "685b289e-a3f1-4028-8903-5abc0653454a",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"Salmaan Alfarisi\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "notes",
+					"item": [
+						{
+							"name": "create",
+							"item": [
+								{
+									"name": "Create new note",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "685b289e-a3f1-4028-8903-5abc0653454a",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"Online test\",\r\n    \"content\": \"I must attend to online test tomorrow by 2pm\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/notes/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"notes",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "{note_id}",
+							"item": [
+								{
+									"name": "update",
+									"item": [
+										{
+											"name": "Update notes by id from authorized user",
+											"request": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "685b289e-a3f1-4028-8903-5abc0653454a",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"title\": \"Household Shopping\",\r\n    \"content\": \"I must do shopping for my house by tomorrow\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/notes/1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"notes",
+														"1"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Get note by id from authorized user",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "685b289e-a3f1-4028-8903-5abc0653454a",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/notes/1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"notes",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete note by id from authorized user",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "685b289e-a3f1-4028-8903-5abc0653454a",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/notes/1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"notes",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Get all notes",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "685b289e-a3f1-4028-8903-5abc0653454a",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/notes/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"notes",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8000/api",
+			"type": "string"
+		}
+	]
+}
