@@ -23,7 +23,7 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "685b289e-a3f1-4028-8903-5abc0653454a",
+												"value": "3ca50980-a712-4d84-b19e-ca199a9df23a",
 												"type": "text"
 											}
 										],
@@ -38,7 +38,148 @@
 											]
 										}
 									},
-									"response": []
+									"response": [
+										{
+											"name": "Delete token from user",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "3ca50980-a712-4d84-b19e-ca199a9df23a",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/users/logout",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"users",
+														"logout"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8000"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 14:53:34 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 14:53:34 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.2.0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "59"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"message\": \"logged out\"\n}"
+										},
+										{
+											"name": "Unauthorized to delete token",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "3ca50980-a712-4d84-b19e-ca199a9df23a",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/users/logout",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"users",
+														"logout"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8000"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 14:53:53 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 14:53:53 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.2.0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "58"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"errors\": {\n        \"message\": [\n            \"Unauthorized\"\n        ]\n    }\n}"
+										}
+									]
 								}
 							]
 						},
@@ -52,7 +193,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"email\": \"amuhammadsalman45@gmail.com\",\r\n    \"password\": \"asdfjklgh\"\r\n}",
+											"raw": "{\r\n    \"email\": \"\",\r\n    \"password\": \"\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -70,7 +211,154 @@
 											]
 										}
 									},
-									"response": []
+									"response": [
+										{
+											"name": "Create new token for user",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"email\": \"amuhammadsalman45@gmail.com\",\r\n    \"password\": \"asdfjklgh\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/users/login",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"users",
+														"login"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8000"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 14:51:20 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 14:51:20 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.2.0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "59"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"email\": \"amuhammadsalman45@gmail.com\",\n        \"username\": \"Salmaan Alfarisi\",\n        \"token\": \"3ca50980-a712-4d84-b19e-ca199a9df23a\"\n    }\n}"
+										},
+										{
+											"name": "Field empty",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"email\": \"\",\r\n    \"password\": \"\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/users/login",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"users",
+														"login"
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8000"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 14:52:09 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 14:52:09 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.2.0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "58"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"errors\": {\n        \"email\": [\n            \"The email field is required.\"\n        ],\n        \"password\": [\n            \"The password field is required.\"\n        ]\n    }\n}"
+										}
+									]
 								}
 							]
 						},
@@ -84,7 +372,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"email\": \"amuhammadsalman45@gmail.com\",\r\n    \"username\" : \"jioaf\",\r\n    \"password\" : \"asdfjklgh\"\r\n}",
+											"raw": "{\r\n    \"email\": \"mark@gmail.com\",\r\n    \"username\" : \"mark\",\r\n    \"password\" : \"asdfjklgh\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -102,7 +390,154 @@
 											]
 										}
 									},
-									"response": []
+									"response": [
+										{
+											"name": "Register new User",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"email\": \"mark@gmail.com\",\r\n    \"username\" : \"mark\",\r\n    \"password\" : \"asdfjklgh\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/users/register",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"users",
+														"register"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8000"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 14:56:58 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 14:56:58 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.2.0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "59"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"email\": \"mark@gmail.com\",\n        \"username\": \"mark\"\n    }\n}"
+										},
+										{
+											"name": "Field empty",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"email\": \"\",\r\n    \"username\" : \"\",\r\n    \"password\" : \"\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/users/register",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"users",
+														"register"
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8000"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 14:58:46 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 14:58:46 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.2.0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "59"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"errors\": {\n        \"email\": [\n            \"The email field is required.\"\n        ],\n        \"username\": [\n            \"The username field is required.\"\n        ],\n        \"password\": [\n            \"The password field is required.\"\n        ]\n    }\n}"
+										}
+									]
 								}
 							]
 						},
@@ -113,7 +548,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "685b289e-a3f1-4028-8903-5abc0653454a",
+										"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed32",
 										"type": "text"
 									}
 								],
@@ -127,7 +562,146 @@
 									]
 								}
 							},
-							"response": []
+							"response": [
+								{
+									"name": "Get authorized User",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed32",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 31 Dec 2023 15:00:31 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 31 Dec 2023 15:00:31 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"email\": \"amuhammadsalman45@gmail.com\",\n        \"username\": \"Salmaan Alfarisi\",\n        \"token\": \"ae82f87d-d852-4113-a2de-6c18a1e1ed32\"\n    }\n}"
+								},
+								{
+									"name": "Unauthorized to get user",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 31 Dec 2023 15:01:04 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 31 Dec 2023 15:01:04 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "57"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"errors\": {\n        \"message\": [\n            \"Unauthorized\"\n        ]\n    }\n}"
+								}
+							]
 						},
 						{
 							"name": "Update authorized User",
@@ -136,13 +710,13 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "685b289e-a3f1-4028-8903-5abc0653454a",
+										"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed32",
 										"type": "text"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"username\": \"Salmaan Alfarisi\"\r\n}",
+									"raw": "{\r\n    \"username\": \"\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -159,15 +733,164 @@
 									]
 								}
 							},
-							"response": []
-						},
-						{
-							"name": "New Request",
-							"request": {
-								"method": "GET",
-								"header": []
-							},
-							"response": []
+							"response": [
+								{
+									"name": "Update authorized User",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed32",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"Salmaan\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 31 Dec 2023 15:03:39 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 31 Dec 2023 15:03:39 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"email\": \"amuhammadsalman45@gmail.com\",\n        \"username\": \"Salmaan\",\n        \"token\": \"ae82f87d-d852-4113-a2de-6c18a1e1ed32\"\n    }\n}"
+								},
+								{
+									"name": "Unauthorized to update",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed32",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 31 Dec 2023 15:04:54 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 31 Dec 2023 15:04:54 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"errors\": {\n        \"message\": [\n            \"Unauthorized\"\n        ]\n    }\n}"
+								}
+							]
 						}
 					]
 				},
@@ -184,13 +907,13 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "685b289e-a3f1-4028-8903-5abc0653454a",
+												"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed32",
 												"type": "text"
 											}
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"title\": \"Online test\",\r\n    \"content\": \"I must attend to online test tomorrow by 2pm\"\r\n}",
+											"raw": "{\r\n    \"title\": \"New Keyboard\",\r\n    \"content\": \"My old keyboard already dusty, I need to clean it by tomorrow\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -208,7 +931,245 @@
 											]
 										}
 									},
-									"response": []
+									"response": [
+										{
+											"name": "Success to create note",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed32",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"title\": \"New Keyboard\",\r\n    \"content\": \"My old keyboard already dusty, I need to clean it by tomorrow\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/notes/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"notes",
+														""
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8000"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 15:06:50 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 15:06:50 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.2.0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "59"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"title\": \"New Keyboard\",\n        \"content\": \"My old keyboard already dusty, I need to clean it by tomorrow\"\n    }\n}"
+										},
+										{
+											"name": "Field empty",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed32",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"title\": \"\",\r\n    \"content\": \"\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/notes/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"notes",
+														""
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8000"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 15:07:20 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 15:07:20 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.2.0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "58"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"errors\": {\n        \"title\": [\n            \"The title field is required.\"\n        ],\n        \"content\": [\n            \"The content field is required.\"\n        ]\n    }\n}"
+										},
+										{
+											"name": "Unauthorized to create new note",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed3",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"title\": \"New Keyboard\",\r\n    \"content\": \"My old keyboard already dusty, I need to clean it by tomorrow\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/notes/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"notes",
+														""
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8000"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 15:07:39 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 15:07:39 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.2.0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "57"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"errors\": {\n        \"message\": [\n            \"Unauthorized\"\n        ]\n    }\n}"
+										}
+									]
 								}
 							]
 						},
@@ -219,25 +1180,531 @@
 									"name": "update",
 									"item": [
 										{
-											"name": "Update notes by id from authorized user",
+											"name": "Update note by id",
 											"request": {
 												"method": "PATCH",
 												"header": [
 													{
 														"key": "Authorization",
-														"value": "685b289e-a3f1-4028-8903-5abc0653454a",
+														"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed32",
 														"type": "text"
 													}
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n    \"title\": \"Household Shopping\",\r\n    \"content\": \"I must do shopping for my house by tomorrow\"\r\n}",
+													"raw": "{\r\n    \"title\": \"New Keyboard\",\r\n    \"content\": \"My old keyboard is so dusty, I need to clean it by tomorrow\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
 														}
 													}
 												},
+												"url": {
+													"raw": "{{baseUrl}}/notes/3",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"notes",
+														"3"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success to update note",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed32",
+																"type": "text"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n    \"title\": \"New Keyboard\",\r\n    \"content\": \"My old keyboard is so dusty, I need to clean it by tomorrow\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/notes/3",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"notes",
+																"3"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Host",
+															"value": "localhost:8000"
+														},
+														{
+															"key": "Date",
+															"value": "Sun, 31 Dec 2023 15:09:23 GMT"
+														},
+														{
+															"key": "Date",
+															"value": "Sun, 31 Dec 2023 15:09:23 GMT"
+														},
+														{
+															"key": "Connection",
+															"value": "close"
+														},
+														{
+															"key": "X-Powered-By",
+															"value": "PHP/8.2.0"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, private"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-RateLimit-Limit",
+															"value": "60"
+														},
+														{
+															"key": "X-RateLimit-Remaining",
+															"value": "59"
+														},
+														{
+															"key": "Access-Control-Allow-Origin",
+															"value": "*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"title\": \"New Keyboard\",\n        \"content\": \"My old keyboard is so dusty, I need to clean it by tomorrow\"\n    }\n}"
+												},
+												{
+													"name": "Field empty",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed32",
+																"type": "text"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n    \"title\": \"\",\r\n    \"content\": \"\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/notes/3",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"notes",
+																"3"
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Host",
+															"value": "localhost:8000"
+														},
+														{
+															"key": "Date",
+															"value": "Sun, 31 Dec 2023 15:09:54 GMT"
+														},
+														{
+															"key": "Date",
+															"value": "Sun, 31 Dec 2023 15:09:54 GMT"
+														},
+														{
+															"key": "Connection",
+															"value": "close"
+														},
+														{
+															"key": "X-Powered-By",
+															"value": "PHP/8.2.0"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, private"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-RateLimit-Limit",
+															"value": "60"
+														},
+														{
+															"key": "X-RateLimit-Remaining",
+															"value": "58"
+														},
+														{
+															"key": "Access-Control-Allow-Origin",
+															"value": "*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n    \"errors\": {\n        \"title\": [\n            \"The title field is required.\"\n        ],\n        \"content\": [\n            \"The content field is required.\"\n        ]\n    }\n}"
+												},
+												{
+													"name": "Unauthorized to update note by id",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed3",
+																"type": "text"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n    \"title\": \"New Keyboard\",\r\n    \"content\": \"My old keyboard is so dusty, I need to clean it by tomorrow\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/notes/3",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"notes",
+																"3"
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Host",
+															"value": "localhost:8000"
+														},
+														{
+															"key": "Date",
+															"value": "Sun, 31 Dec 2023 15:10:12 GMT"
+														},
+														{
+															"key": "Date",
+															"value": "Sun, 31 Dec 2023 15:10:12 GMT"
+														},
+														{
+															"key": "Connection",
+															"value": "close"
+														},
+														{
+															"key": "X-Powered-By",
+															"value": "PHP/8.2.0"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, private"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-RateLimit-Limit",
+															"value": "60"
+														},
+														{
+															"key": "X-RateLimit-Remaining",
+															"value": "57"
+														},
+														{
+															"key": "Access-Control-Allow-Origin",
+															"value": "*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n    \"errors\": {\n        \"message\": [\n            \"Unauthorized\"\n        ]\n    }\n}"
+												},
+												{
+													"name": "Note not found",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed32",
+																"type": "text"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n    \"title\": \"New Keyboard\",\r\n    \"content\": \"My old keyboard is so dusty, I need to clean it by tomorrow\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/notes/1",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"notes",
+																"1"
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Host",
+															"value": "localhost:8000"
+														},
+														{
+															"key": "Date",
+															"value": "Sun, 31 Dec 2023 15:21:06 GMT"
+														},
+														{
+															"key": "Date",
+															"value": "Sun, 31 Dec 2023 15:21:06 GMT"
+														},
+														{
+															"key": "Connection",
+															"value": "close"
+														},
+														{
+															"key": "X-Powered-By",
+															"value": "PHP/8.2.0"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, private"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "X-RateLimit-Limit",
+															"value": "60"
+														},
+														{
+															"key": "X-RateLimit-Remaining",
+															"value": "59"
+														},
+														{
+															"key": "Access-Control-Allow-Origin",
+															"value": "*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n    \"errors\": {\n        \"message\": [\n            \"Not found\"\n        ]\n    }\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "Get note by id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed32",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/notes/3",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"notes",
+												"3"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success to get note",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed32",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/notes/2",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"notes",
+														"2"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8000"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 15:13:52 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 15:13:52 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.2.0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "58"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"title\": \"Online test\",\n        \"content\": \"I must attend to online test tomorrow by 2pm\"\n    }\n}"
+										},
+										{
+											"name": "Unauthorized to get note by id",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed3",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/notes/2",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"notes",
+														"2"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8000"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 15:16:13 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 15:16:13 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.2.0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "59"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"errors\": {\n        \"message\": [\n            \"Unauthorized\"\n        ]\n    }\n}"
+										},
+										{
+											"name": "Note not found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed32",
+														"type": "text"
+													}
+												],
 												"url": {
 													"raw": "{{baseUrl}}/notes/1",
 													"host": [
@@ -249,57 +1716,290 @@
 													]
 												}
 											},
-											"response": []
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8000"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 15:19:03 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 15:19:03 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.2.0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "57"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"errors\": {\n        \"message\": [\n            \"Not found\"\n        ]\n    }\n}"
 										}
 									]
 								},
 								{
-									"name": "Get note by id from authorized user",
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "685b289e-a3f1-4028-8903-5abc0653454a",
-												"type": "text"
-											}
-										],
-										"url": {
-											"raw": "{{baseUrl}}/notes/1",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"notes",
-												"1"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "Delete note by id from authorized user",
+									"name": "Delete note by id",
 									"request": {
 										"method": "DELETE",
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "685b289e-a3f1-4028-8903-5abc0653454a",
+												"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed32",
 												"type": "text"
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/notes/1",
+											"raw": "{{baseUrl}}/notes/2",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"notes",
-												"1"
+												"2"
 											]
 										}
 									},
-									"response": []
+									"response": [
+										{
+											"name": "Note not found",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed32",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/notes/1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"notes",
+														"1"
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8000"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 15:18:26 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 15:18:26 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.2.0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "58"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"errors\": {\n        \"message\": [\n            \"Not found\"\n        ]\n    }\n}"
+										},
+										{
+											"name": "Unauthorized to delete note",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed3",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/notes/1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"notes",
+														"1"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8000"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 15:19:19 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 15:19:19 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.2.0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "59"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"errors\": {\n        \"message\": [\n            \"Unauthorized\"\n        ]\n    }\n}"
+										},
+										{
+											"name": "Delete note by id",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed32",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/notes/2",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"notes",
+														"2"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8000"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 15:19:57 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 31 Dec 2023 15:19:57 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.2.0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "57"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": true\n}"
+										}
+									]
 								}
 							]
 						},
@@ -310,7 +2010,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "685b289e-a3f1-4028-8903-5abc0653454a",
+										"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed32",
 										"type": "text"
 									}
 								],
@@ -325,7 +2025,148 @@
 									]
 								}
 							},
-							"response": []
+							"response": [
+								{
+									"name": "Get all notes",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed32",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/notes/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"notes",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 31 Dec 2023 15:17:17 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 31 Dec 2023 15:17:17 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"notes\": [\n        {\n            \"id\": 2,\n            \"title\": \"Online test\",\n            \"content\": \"I must attend to online test tomorrow by 2pm\",\n            \"user_id\": 1,\n            \"created_at\": \"2023-12-30T08:58:15.000000Z\",\n            \"updated_at\": \"2023-12-30T08:58:15.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"New Keyboard\",\n            \"content\": \"My old keyboard is so dusty, I need to clean it by tomorrow\",\n            \"user_id\": 1,\n            \"created_at\": \"2023-12-31T15:06:50.000000Z\",\n            \"updated_at\": \"2023-12-31T15:09:23.000000Z\"\n        }\n    ]\n}"
+								},
+								{
+									"name": "Unauthorized to get all notes",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "ae82f87d-d852-4113-a2de-6c18a1e1ed3",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/notes/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"notes",
+												""
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 31 Dec 2023 15:17:43 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 31 Dec 2023 15:17:43 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"errors\": {\n        \"message\": [\n            \"Unauthorized\"\n        ]\n    }\n}"
+								}
+							]
 						}
 					]
 				}
